@@ -1,0 +1,21 @@
+<title>Login Page</title>
+<style>
+body {
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvDCOvxAIYe6k9Z-wpfBhZh1EUWPkZYB4VFU-C24_APPLHLS3E");
+      background-size:1200px}
+</style>
+
+<br><br><br><br><br><br><br>
+
+
+<center><form action="/log/" method="POST">
+    {% csrf_token %}
+    Email:<input type="email" placeholder="email" name="email"><br><br>
+    password:<input type="password" placeholder="password" name="pwd" required><br>{{msg}}<br>
+    <button type="submit" value="login">login</button>
+    
+</form><br>
+<button><a href="/reg/">New User</a></button>
+<a href="/forgot/">Forgot password</a>
+
+</center>

@@ -1,0 +1,31 @@
+
+<title>Get Ticket</title>
+<style>  
+ body {margin:4;
+    background-image: url("https://purepng.com/public/uploads/thumbnail/purepng.com-film-reelobjectsfilm-reelcamera-object-tape-movie-film-cinema-picture-video-reel-strip-631522326002olv7i.png");
+    background-size:67pc}
+
+</style>   
+<body>
+    <div>
+        <br><br><br><br>
+        <form  action="/ticket/" method="POST">
+            {% csrf_token%}
+            &emsp;&emsp;&emsp;&emsp;<input type="text" placeholder="Enter Ticket_id ex:TK1234" name="tid">
+        <input type="submit" value="Get Ticket"></form>
+            {{msg}}
+
+    </div>   
+<div >  
+    <br><br><br>
+    <table border="8" width="50%" height="40%">
+    {% for tk in tk%}
+    <tr><th>Movie Name</th><td>&emsp;&emsp;{{tk.movie_name}}</td></tr>
+    <tr><th>Theatre Name</th><td>&emsp;&emsp;{{tk.theatre_name}}</td></tr>
+    <tr><th>Date</th><td>&emsp;&emsp;{{tk.date}}</td></tr>
+    <tr><th>Show Time</th><td>&emsp;&emsp;{{tk.time}}</td></tr>
+    <tr><th>Seat Nos</th><td>&emsp;&emsp;{{tk.seat}}</td></tr>
+    {% endfor%}  
+</table>
+</div>
+</body>

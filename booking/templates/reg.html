@@ -1,0 +1,24 @@
+<title>Register Page</title>
+<style>
+  body {
+        
+        background-image: url("https://ak7.picdn.net/shutterstock/videos/3718097/thumb/2.jpg");
+        background-size:900pt;
+  }      
+  </style>
+  
+<body>   
+  <br><br><br><br><br><br><br><br>
+
+    <center><form action="/reg/" method="POST">
+            {%csrf_token%}
+        Name:<input type="text" name="name" placeholder="Name" required >&emsp;
+        &emsp; Email:<input type="email" name="email" placeholder="Email" required><br>
+        &emsp; Mobile:<input type="tel" name="mobile" placeholder="Mobile number" required>
+        &emsp; &emsp;Password:<input type="password" name="pwd" placeholder="password" required><br>
+        <button><input  type="submit" value="Register"></button>
+    </form>
+  <button><a href="/">Already Register</a></button> </center>
+</body>
+
+

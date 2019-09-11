@@ -1,0 +1,102 @@
+<title>Ticket Booking Homepage</title>
+<body>
+<style>
+body {margin:1;
+      }
+
+.icon-bar{
+  background-color:  rgb(19, 18, 18);
+  padding: .01cm;
+  width:100%;
+}
+.aicon-bar a:hover {
+  background-color:aliceblue;
+}
+.aicon-bar{
+  background-color: rgba(8, 8, 8, 0.096);
+  padding: .2cm;
+  width: 100%;
+}
+.aicon-bar a {
+  float: left;
+  width: 10%;                        
+  padding: 1px;
+  transition: all 0.3s ease;
+  color:black;
+  font-size:13;
+  font-weight:900;
+  text-decoration:none;
+} 
+</style>
+
+
+
+
+<div class="icon-bar">
+  <h2 style="color: aliceblue">Ticket Booking</h2>
+</div>  
+<div>
+<marquee animation="15s" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+  <h3>Welcome to TicketBooking</h3>
+</marquee></div>
+<div class="aicon-bar">
+    <a href="/movies/">&emsp;  Movies </a>
+    <a href="/theatres/">Theatre</a>
+    <a href="/log/">Book Now</a> 
+    <a href="/reg/">Register</a>
+    <a href="/ticket/">Retrieve Ticket</a>
+    <form  action="/search/" method="POST">
+      {% csrf_token%}
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" name="nm" placeholder="search" role="search" required>
+      <input type="submit" value="search">
+    </form>
+  </div>
+<div>
+<marquee behavior="scroll" direction="left">
+    <img src="images/evru.jpg"  width="500" height="300">
+    <img src="miss.jpeg"  width="500" height="300">
+    <img src="images/inc.jpeg" width="500" height="300">
+    <img src="rak1.jpg"  width="500" height="300">
+    <img src="man2.jpeg"  width="500" height="300">
+    <img src="pe2.jpg"  width="500" height="300">
+    <img src="sari.jpeg"  width="500" height="300">
+</marquee> 
+</div>
+
+<div>
+    <div style="float:left;width:16.666666666666668%">
+        <a href="movie/m1/"> <img src="images/rak.jpeg" width="180" height="300" border='2'></a>
+        Name:Rakshyasudu<br>Language:Telugu&emsp;&emsp;
+    </div>
+  
+  <div style="float:left;width:16.666666666666668%">
+      <a href="movie/m2/">  <img src="images/manm.jpeg" width="180" height="300" border='2'></a>
+      Name:Manmadhudu2<br>Language:Telugu&emsp;
+  </div>
+  
+  <div style="float:left;width:16.666666666666668%" >
+      <a href="movie/m3/">  <img src="images/i.jpg"  width="180" height="300" border='2'></a>
+      Name:Inception<br>Language:English&emsp;&emsp;
+  </div>
+<div style="float:left;width:16.666666666666668%">
+    <a href="movie/m4/">  <img src="images/kav.jpg" width="180" height="300" border='2'></a>
+    Name:kavacha<br>Language:kannada&emsp;&emsp;
+</div>
+  <div style="float:left;width:16.666666666666668%">
+      <a href="m5/">  <img src="images/peet.jpeg" width="180" height="300" border='2'></a>
+      Name:Petta<br>Language:Tamil&emsp;
+  </div>
+  <div style="float:left;width:16.666666666666668%">
+      <a href="m6/">  <img src="images/premam.jpeg" width="180" height="300" border='2'></a>
+      Name:premam<br>Language:Malyalam&emsp;
+  </div>
+  <div style="float:left;width:16.666666666666668%">
+    <a href="m7/">  <img src="images/sari1.jpeg" width="180" height="300" border='2'></a>&emsp;
+    Name:Sarileru Nekevvaru<br>Language:Telugu&emsp; 
+  </div>
+  
+
+</div>
+
+</body>
+

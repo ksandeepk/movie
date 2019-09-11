@@ -1,0 +1,13 @@
+<title>Search result page</title>
+
+{% for sp in sp%}
+    Movie_name:{{sp.movie_name}}&emsp;
+    Cast:{{sp.cast}}&emsp;
+    Director:{{sp.director}}&emsp;
+    Language:{{sp.language}}&emsp;<br>
+    Image:<img width="200" height="250" src="{{sp.image.url}}"><br>
+    
+{% endfor%}
+
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movies</title>
+</head>
+<title>All Movies</title>
+<style>
+body{
+    float: left;
+}
+</style>
+<body>
+<table border="2">
+    <tr><th> Movie_name</th>
+    <th> Cast</th></tr>
+    {% for ms in ms%}
+    <tr><td><a href="/movied/{{ms.id}}" >{{ms.movie_name}}</a></td>   
+    <td> {{ms.cast}}</td>  </tr> 
+    {% endfor%}
+    </table>
+   
+</body>
+</html>    
